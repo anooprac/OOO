@@ -1,0 +1,13 @@
+
+no_mem:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d2800000 	mov	x0, #0x0                   	// #0
+  400004:	f2800061 	movk	x1, #0x3
+  400008:	eb000022 	subs	x2, x1, x0
+  40000c:	d1000403 	sub	x3, x0, #0x1
+  400010:	92400840 	and	x0, x2, #0x7
+  400014:	d65f03c0 	ret

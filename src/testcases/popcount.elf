@@ -1,0 +1,118 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x400000
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          66248 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         1
+  Size of section headers:           64 (bytes)
+  Number of section headers:         5
+  Section header string table index: 4
+
+Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .text             PROGBITS         0000000000400000  00010000
+       00000000000000ec  0000000000000000  AX       0     0     4
+  [ 2] .symtab           SYMTAB           0000000000000000  000100f0
+       0000000000000150  0000000000000018           3     4     8
+  [ 3] .strtab           STRTAB           0000000000000000  00010240
+       0000000000000062  0000000000000000           0     0     1
+  [ 4] .shstrtab         STRTAB           0000000000000000  000102a2
+       0000000000000021  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  LOAD           0x0000000000010000 0x0000000000400000 0x0000000000400000
+                 0x00000000000000ec 0x00000000000000ec  R E    0x10000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+The decoding of unwind sections for machine type AArch64 is not currently supported.
+
+Symbol table '.symtab' contains 14 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000400000     0 SECTION LOCAL  DEFAULT    1 .text
+     2: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS cc1xCSqv.o
+     3: 0000000000400000     0 NOTYPE  LOCAL  DEFAULT    1 $x
+     4: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 _bss_end__
+     5: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 __bss_start__
+     6: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 __bss_end__
+     7: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 __bss_start
+     8: 0000000000400000     0 NOTYPE  GLOBAL DEFAULT    1 main
+     9: 00000000004100f0     0 NOTYPE  GLOBAL DEFAULT    1 __end__
+    10: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 _edata
+    11: 00000000004100f0     0 NOTYPE  GLOBAL DEFAULT    1 _end
+    12: 0000000000080000     0 NOTYPE  GLOBAL DEFAULT    1 _stack
+    13: 00000000004100ec     0 NOTYPE  GLOBAL DEFAULT    1 __data_start
+
+No version information found in this file.
+
+Hex dump of section '.text':
+  0x00400000 ff4300d1 e8dd97d2 a8ddbff2 a8d5dbf2 .C..............
+  0x00400010 c859fff2 e9f300b2 eae700b2 ebcf00b2 .Y..............
+  0x00400020 ec9f00b2 ed3f00b2 ee7f40b2 ffc300f8 .....?....@.....
+  0x00400030 e80300f8 e80340f8 0801098a ef0340f8 ......@.......@.
+  0x00400040 effd41d3 e901098a 0801098b e80300f8 ..A.............
+  0x00400050 e80340f8 08010a8a e90340f8 29fd42d3 ..@.......@.).B.
+  0x00400060 29010a8a 0801098b e80300f8 e80340f8 ).............@.
+  0x00400070 08010b8a e90340f8 29fd44d3 29010b8a ......@.).D.)...
+  0x00400080 0801098b e80300f8 e80340f8 08010c8a ..........@.....
+  0x00400090 e90340f8 29fd48d3 29010c8a 0801098b ..@.).H.).......
+  0x004000a0 e80300f8 e80340f8 08010d8a e90340f8 ......@.......@.
+  0x004000b0 29fd50d3 29010d8a 0801098b e80300f8 ).P.)...........
+  0x004000c0 e80340f8 08010e8a e90340f8 29fd60d3 ..@.......@.).`.
+  0x004000d0 29010e8a 0801098b e80300f8 e80340f8 ).............@.
+  0x004000e0 e00308aa ff430091 c0035fd6          .....C...._.
+
+
+Hex dump of section '.symtab':
+  0x00000000 00000000 00000000 00000000 00000000 ................
+  0x00000010 00000000 00000000 00000000 03000100 ................
+  0x00000020 00004000 00000000 00000000 00000000 ..@.............
+  0x00000030 01000000 0400f1ff 00000000 00000000 ................
+  0x00000040 00000000 00000000 0c000000 00000100 ................
+  0x00000050 00004000 00000000 00000000 00000000 ..@.............
+  0x00000060 1e000000 10000100 ec004100 00000000 ..........A.....
+  0x00000070 00000000 00000000 0f000000 10000100 ................
+  0x00000080 ec004100 00000000 00000000 00000000 ..A.............
+  0x00000090 1d000000 10000100 ec004100 00000000 ..........A.....
+  0x000000a0 00000000 00000000 29000000 10000100 ........).......
+  0x000000b0 ec004100 00000000 00000000 00000000 ..A.............
+  0x000000c0 35000000 10000100 00004000 00000000 5.........@.....
+  0x000000d0 00000000 00000000 3a000000 10000100 ........:.......
+  0x000000e0 f0004100 00000000 00000000 00000000 ..A.............
+  0x000000f0 42000000 10000100 ec004100 00000000 B.........A.....
+  0x00000100 00000000 00000000 49000000 10000100 ........I.......
+  0x00000110 f0004100 00000000 00000000 00000000 ..A.............
+  0x00000120 4e000000 10000100 00000800 00000000 N...............
+  0x00000130 00000000 00000000 55000000 10000100 ........U.......
+  0x00000140 ec004100 00000000 00000000 00000000 ..A.............
+

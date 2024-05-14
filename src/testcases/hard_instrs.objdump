@@ -1,0 +1,15 @@
+
+hard_instrs:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d2800000 	mov	x0, #0x0                   	// #0
+  400004:	f2800041 	movk	x1, #0x2
+  400008:	f2800002 	movk	x2, #0x0
+  40000c:	d1000c42 	sub	x2, x2, #0x3
+  400010:	d37df023 	lsl	x3, x1, #3
+  400014:	d341fc24 	lsr	x4, x1, #1
+  400018:	9342fc45 	asr	x5, x2, #2
+  40001c:	d65f03c0 	ret

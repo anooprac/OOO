@@ -1,0 +1,136 @@
+
+./testcases/bubblesort_long:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <bubbleSort>:
+  400000:	d100c3ff 	sub	sp, sp, #0x30
+  400004:	f80283e0 	stur	x0, [sp, #40]
+  400008:	f80203e1 	stur	x1, [sp, #32]
+  40000c:	f80183ff 	stur	xzr, [sp, #24]
+  400010:	14000001 	b	400014 <bubbleSort+0x14>
+  400014:	f84183e8 	ldur	x8, [sp, #24]
+  400018:	f84203e9 	ldur	x9, [sp, #32]
+  40001c:	d1000529 	sub	x9, x9, #0x1
+  400020:	eb090108 	subs	x8, x8, x9
+  400024:	540007aa 	b.ge	400118 <bubbleSort+0x118>  // b.tcont
+  400028:	14000001 	b	40002c <bubbleSort+0x2c>
+  40002c:	f80103ff 	stur	xzr, [sp, #16]
+  400030:	14000001 	b	400034 <bubbleSort+0x34>
+  400034:	f84103e8 	ldur	x8, [sp, #16]
+  400038:	f84203e9 	ldur	x9, [sp, #32]
+  40003c:	f84183ea 	ldur	x10, [sp, #24]
+  400040:	eb0a0129 	subs	x9, x9, x10
+  400044:	d1000529 	sub	x9, x9, #0x1
+  400048:	eb090108 	subs	x8, x8, x9
+  40004c:	540005ca 	b.ge	400104 <bubbleSort+0x104>  // b.tcont
+  400050:	14000001 	b	400054 <bubbleSort+0x54>
+  400054:	f84283e8 	ldur	x8, [sp, #40]
+  400058:	f84103e9 	ldur	x9, [sp, #16]
+  40005c:	d37df129 	lsl	x9, x9, #3
+  400060:	ab09010a 	adds	x10, x8, x9
+  400064:	f8400148 	ldur	x8, [x10]
+  400068:	f84283e9 	ldur	x9, [sp, #40]
+  40006c:	f84103ea 	ldur	x10, [sp, #16]
+  400070:	9100054a 	add	x10, x10, #0x1
+  400074:	d37df14a 	lsl	x10, x10, #3
+  400078:	ab0a012b 	adds	x11, x9, x10
+  40007c:	f8400169 	ldur	x9, [x11]
+  400080:	eb090108 	subs	x8, x8, x9
+  400084:	5400036d 	b.le	4000f0 <bubbleSort+0xf0>
+  400088:	14000001 	b	40008c <bubbleSort+0x8c>
+  40008c:	f84283e8 	ldur	x8, [sp, #40]
+  400090:	f84103e9 	ldur	x9, [sp, #16]
+  400094:	d37df129 	lsl	x9, x9, #3
+  400098:	ab09010a 	adds	x10, x8, x9
+  40009c:	f8400148 	ldur	x8, [x10]
+  4000a0:	f80083e8 	stur	x8, [sp, #8]
+  4000a4:	f84283e8 	ldur	x8, [sp, #40]
+  4000a8:	f84103e9 	ldur	x9, [sp, #16]
+  4000ac:	91000529 	add	x9, x9, #0x1
+  4000b0:	d37df129 	lsl	x9, x9, #3
+  4000b4:	ab09010a 	adds	x10, x8, x9
+  4000b8:	f8400148 	ldur	x8, [x10]
+  4000bc:	f84283e9 	ldur	x9, [sp, #40]
+  4000c0:	f84103ea 	ldur	x10, [sp, #16]
+  4000c4:	d37df14a 	lsl	x10, x10, #3
+  4000c8:	ab0a012b 	adds	x11, x9, x10
+  4000cc:	f8000168 	stur	x8, [x11]
+  4000d0:	f84083e8 	ldur	x8, [sp, #8]
+  4000d4:	f84283e9 	ldur	x9, [sp, #40]
+  4000d8:	f84103ea 	ldur	x10, [sp, #16]
+  4000dc:	9100054a 	add	x10, x10, #0x1
+  4000e0:	d37df14a 	lsl	x10, x10, #3
+  4000e4:	ab0a012b 	adds	x11, x9, x10
+  4000e8:	f8000168 	stur	x8, [x11]
+  4000ec:	14000001 	b	4000f0 <bubbleSort+0xf0>
+  4000f0:	14000001 	b	4000f4 <bubbleSort+0xf4>
+  4000f4:	f84103e8 	ldur	x8, [sp, #16]
+  4000f8:	91000508 	add	x8, x8, #0x1
+  4000fc:	f80103e8 	stur	x8, [sp, #16]
+  400100:	17ffffcd 	b	400034 <bubbleSort+0x34>
+  400104:	14000001 	b	400108 <bubbleSort+0x108>
+  400108:	f84183e8 	ldur	x8, [sp, #24]
+  40010c:	91000508 	add	x8, x8, #0x1
+  400110:	f80183e8 	stur	x8, [sp, #24]
+  400114:	17ffffc0 	b	400014 <bubbleSort+0x14>
+  400118:	9100c3ff 	add	sp, sp, #0x30
+  40011c:	d65f03c0 	ret
+
+0000000000400120 <main>:
+  400120:	a93f7bfd 	stp	x29, x30, [sp, #-16]
+  400124:	d10043ff 	sub	sp, sp, #0x10
+  400128:	910007fd 	add	x29, sp, #0x1
+  40012c:	d10007bd 	sub	x29, x29, #0x1
+  400130:	d100c3ff 	sub	sp, sp, #0x30
+  400134:	f81fc3bf 	stur	xzr, [x29, #-4]
+  400138:	d2800c88 	mov	x8, #0x64                  	// #100
+  40013c:	f81f03a8 	stur	x8, [x29, #-16]
+  400140:	f85f03a8 	ldur	x8, [x29, #-16]
+  400144:	910007e9 	add	x9, sp, #0x1
+  400148:	d1000529 	sub	x9, x9, #0x1
+  40014c:	f81e83a9 	stur	x9, [x29, #-24]
+  400150:	d37df109 	lsl	x9, x8, #3
+  400154:	91003d29 	add	x9, x9, #0xf
+  400158:	927ced2a 	and	x10, x9, #0xfffffffffffffff0
+  40015c:	910007e9 	add	x9, sp, #0x1
+  400160:	d1000529 	sub	x9, x9, #0x1
+  400164:	eb0a0129 	subs	x9, x9, x10
+  400168:	9100053f 	add	sp, x9, #0x1
+  40016c:	d10007ff 	sub	sp, sp, #0x1
+  400170:	f81d03a9 	stur	x9, [x29, #-48]
+  400174:	f81e03a8 	stur	x8, [x29, #-32]
+  400178:	f81d83bf 	stur	xzr, [x29, #-40]
+  40017c:	14000001 	b	400180 <main+0x60>
+  400180:	f85d83a8 	ldur	x8, [x29, #-40]
+  400184:	f85f03a9 	ldur	x9, [x29, #-16]
+  400188:	eb090108 	subs	x8, x8, x9
+  40018c:	540001ea 	b.ge	4001c8 <main+0xa8>  // b.tcont
+  400190:	14000001 	b	400194 <main+0x74>
+  400194:	f85d03a9 	ldur	x9, [x29, #-48]
+  400198:	f85f03a8 	ldur	x8, [x29, #-16]
+  40019c:	f85d83aa 	ldur	x10, [x29, #-40]
+  4001a0:	eb0a0108 	subs	x8, x8, x10
+  4001a4:	f85d83aa 	ldur	x10, [x29, #-40]
+  4001a8:	d37df14b 	lsl	x11, x10, #3
+  4001ac:	ab0b012b 	adds	x11, x9, x11
+  4001b0:	f8000168 	stur	x8, [x11]
+  4001b4:	14000001 	b	4001b8 <main+0x98>
+  4001b8:	f85d83a8 	ldur	x8, [x29, #-40]
+  4001bc:	91000508 	add	x8, x8, #0x1
+  4001c0:	f81d83a8 	stur	x8, [x29, #-40]
+  4001c4:	17ffffef 	b	400180 <main+0x60>
+  4001c8:	f85d03a0 	ldur	x0, [x29, #-48]
+  4001cc:	f85f03a1 	ldur	x1, [x29, #-16]
+  4001d0:	97ffff8c 	bl	400000 <bubbleSort>
+  4001d4:	f81fc3bf 	stur	xzr, [x29, #-4]
+  4001d8:	f85e83a8 	ldur	x8, [x29, #-24]
+  4001dc:	9100051f 	add	sp, x8, #0x1
+  4001e0:	d10007ff 	sub	sp, sp, #0x1
+  4001e4:	f85fc3a0 	ldur	x0, [x29, #-4]
+  4001e8:	910007bf 	add	sp, x29, #0x1
+  4001ec:	d10007ff 	sub	sp, sp, #0x1
+  4001f0:	a9407bfd 	ldp	x29, x30, [sp]
+  4001f4:	910043ff 	add	sp, sp, #0x10
+  4001f8:	d65f03c0 	ret

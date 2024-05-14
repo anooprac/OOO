@@ -1,0 +1,16 @@
+
+mem:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d2820000 	mov	x0, #0x1000                	// #4096
+  400004:	f2a24680 	movk	 x0, #0x1234, lsl #16
+  400008:	d28000a1 	mov	x1, #0x5                   	// #5
+  40000c:	f8008001 	stur	x1, [x0, #8]
+  400010:	f8408002 	ldur	x2, [x0, #8]
+  400014:	a9010801 	stp	x1, x2, [x0, #16]
+  400018:	a9411003 	ldp	x3, x4, [x0, #16]
+  40001c:	ab040065 	adds	x5, x3, x4
+  400020:	d65f03c0 	ret

@@ -1,0 +1,29 @@
+
+imm:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	f8408020 	ldur	x0, [x1, #8]
+  400004:	a9410fe2 	ldp	x2, x3, [sp, #16]
+  400008:	b80080a4 	stur	w4, [x5, #8]
+  40000c:	a9019fe6 	stp	x6, x7, [sp, #24]
+  400010:	f2800208 	movk	x8, #0x10
+  400014:	d2800309 	mov	x9, #0x18                  	// #24
+  400018:	1000002a 	adr	x10, 40001c <label>
+
+000000000040001c <label>:
+  40001c:	9000000b 	adrp	x11, 400000 <main>
+
+0000000000400020 <label1>:
+  400020:	91002020 	add	x0, x1, #0x8
+  400024:	d10020e6 	sub	x6, x7, #0x8
+  400028:	92400af6 	and	x22, x23, #0x7
+  40002c:	d37cec23 	lsl	x3, x1, #4
+  400030:	d344fc20 	lsr	x0, x1, #4
+  400034:	93442c62 	sbfx	x2, x3, #4, #8
+  400038:	d3442ca4 	ubfx	x4, x5, #4, #8
+  40003c:	9344fce6 	asr	x6, x7, #4
+  400040:	d65f03c0 	ret
+  400044:	d503201f 	nop

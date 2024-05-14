@@ -1,0 +1,30 @@
+
+bubblesort:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d10083ff 	sub	sp, sp, #0x20
+  400004:	d2800028 	mov	x8, #0x1                   	// #1
+  400008:	f80003e8 	stur	x8, [sp]
+  40000c:	d2800048 	mov	x8, #0x2                   	// #2
+  400010:	f80083e8 	stur	x8, [sp, #8]
+  400014:	d2800068 	mov	x8, #0x3                   	// #3
+  400018:	f80103e8 	stur	x8, [sp, #16]
+  40001c:	d2800088 	mov	x8, #0x4                   	// #4
+  400020:	f80183e8 	stur	x8, [sp, #24]
+  400024:	f84003e8 	ldur	x8, [sp]
+  400028:	91000d08 	add	x8, x8, #0x3
+  40002c:	f80003e8 	stur	x8, [sp]
+  400030:	f84083e8 	ldur	x8, [sp, #8]
+  400034:	91000d08 	add	x8, x8, #0x3
+  400038:	f80083e8 	stur	x8, [sp, #8]
+  40003c:	f84103e8 	ldur	x8, [sp, #16]
+  400040:	91000d08 	add	x8, x8, #0x3
+  400044:	f80103e8 	stur	x8, [sp, #16]
+  400048:	f84183e8 	ldur	x8, [sp, #24]
+  40004c:	91000d08 	add	x8, x8, #0x3
+  400050:	f80183e8 	stur	x8, [sp, #24]
+  400054:	910083ff 	add	sp, sp, #0x20
+  400058:	d65f03c0 	ret

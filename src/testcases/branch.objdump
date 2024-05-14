@@ -1,0 +1,16 @@
+
+branch:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d28000a1 	mov	x1, #0x5                   	// #5
+
+0000000000400004 <label>:
+  400004:	d2800022 	mov	x2, #0x1                   	// #1
+  400008:	eb020021 	subs	x1, x1, x2
+  40000c:	b5ffffc1 	cbnz	x1, 400004 <label>
+
+0000000000400010 <label2>:
+  400010:	91000843 	add	x3, x2, #0x2

@@ -1,0 +1,79 @@
+
+./testcases/popcount:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000400000 <main>:
+  400000:	d10043ff 	sub	sp, sp, #0x10
+  400004:	d297dde8 	mov	x8, #0xbeef                	// #48879
+  400008:	f2bfdda8 	movk	x8, #0xfeed, lsl #16
+  40000c:	f2dbd5a8 	movk	x8, #0xdead, lsl #32
+  400010:	f2ff59c8 	movk	x8, #0xface, lsl #48
+  400014:	d28aaaa9 	mov	x9, #0x5555                	// #21845
+  400018:	f2aaaaa9 	movk	x9, #0x5555, lsl #16
+  40001c:	f2caaaa9 	movk	x9, #0x5555, lsl #32
+  400020:	f2eaaaa9 	movk	x9, #0x5555, lsl #48
+  400024:	d286666a 	mov	x10, #0x3333                	// #13107
+  400028:	f2a6666a 	movk	x10, #0x3333, lsl #16
+  40002c:	f2c6666a 	movk	x10, #0x3333, lsl #32
+  400030:	f2e6666a 	movk	x10, #0x3333, lsl #48
+  400034:	d281e1eb 	mov	x11, #0xf0f                 	// #3855
+  400038:	f2a1e1eb 	movk	x11, #0xf0f, lsl #16
+  40003c:	f2c1e1eb 	movk	x11, #0xf0f, lsl #32
+  400040:	f2e1e1eb 	movk	x11, #0xf0f, lsl #48
+  400044:	d2801fec 	mov	x12, #0xff                  	// #255
+  400048:	f2a01fec 	movk	x12, #0xff, lsl #16
+  40004c:	f2c01fec 	movk	x12, #0xff, lsl #32
+  400050:	f2e01fec 	movk	x12, #0xff, lsl #48
+  400054:	d29fffed 	mov	x13, #0xffff                	// #65535
+  400058:	f2dfffed 	movk	x13, #0xffff, lsl #32
+  40005c:	d29fffee 	mov	x14, #0xffff                	// #65535
+  400060:	f2bfffef 	movk	x15, #0xffff, lsl #16
+  400064:	f800c3ff 	stur	xzr, [sp, #12]
+  400068:	f80003e8 	stur	x8, [sp]
+  40006c:	f84003e8 	ldur	x8, [sp]
+  400070:	ea090108 	ands	x8, x8, x9
+  400074:	f84003ef 	ldur	x15, [sp]
+  400078:	d341fdef 	lsr	x15, x15, #1
+  40007c:	ea0901e9 	ands	x9, x15, x9
+  400080:	ab090108 	adds	x8, x8, x9
+  400084:	f80003e8 	stur	x8, [sp]
+  400088:	f84003e8 	ldur	x8, [sp]
+  40008c:	ea0a0108 	ands	x8, x8, x10
+  400090:	f84003e9 	ldur	x9, [sp]
+  400094:	d342fd29 	lsr	x9, x9, #2
+  400098:	ea0a0129 	ands	x9, x9, x10
+  40009c:	ab090108 	adds	x8, x8, x9
+  4000a0:	f80003e8 	stur	x8, [sp]
+  4000a4:	f84003e8 	ldur	x8, [sp]
+  4000a8:	ea0b0108 	ands	x8, x8, x11
+  4000ac:	f84003e9 	ldur	x9, [sp]
+  4000b0:	d344fd29 	lsr	x9, x9, #4
+  4000b4:	ea0b0129 	ands	x9, x9, x11
+  4000b8:	ab090108 	adds	x8, x8, x9
+  4000bc:	f80003e8 	stur	x8, [sp]
+  4000c0:	f84003e8 	ldur	x8, [sp]
+  4000c4:	ea0c0108 	ands	x8, x8, x12
+  4000c8:	f84003e9 	ldur	x9, [sp]
+  4000cc:	d348fd29 	lsr	x9, x9, #8
+  4000d0:	ea0c0129 	ands	x9, x9, x12
+  4000d4:	ab090108 	adds	x8, x8, x9
+  4000d8:	f80003e8 	stur	x8, [sp]
+  4000dc:	f84003e8 	ldur	x8, [sp]
+  4000e0:	ea0d0108 	ands	x8, x8, x13
+  4000e4:	f84003e9 	ldur	x9, [sp]
+  4000e8:	d350fd29 	lsr	x9, x9, #16
+  4000ec:	ea0d0129 	ands	x9, x9, x13
+  4000f0:	ab090108 	adds	x8, x8, x9
+  4000f4:	f80003e8 	stur	x8, [sp]
+  4000f8:	f84003e8 	ldur	x8, [sp]
+  4000fc:	ea0e0108 	ands	x8, x8, x14
+  400100:	f84003e9 	ldur	x9, [sp]
+  400104:	d360fd29 	lsr	x9, x9, #32
+  400108:	ea0e0129 	ands	x9, x9, x14
+  40010c:	ab090108 	adds	x8, x8, x9
+  400110:	f80003e8 	stur	x8, [sp]
+  400114:	f84003e8 	ldur	x8, [sp]
+  400118:	910043ff 	add	sp, sp, #0x10
+  40011c:	d65f03c0 	ret
